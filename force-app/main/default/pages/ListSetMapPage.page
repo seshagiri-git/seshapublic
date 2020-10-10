@@ -1,0 +1,11 @@
+<apex:page controller="ListSetMapExample2">
+    <apex:form >
+    <apex:pageBlock title="List Values">
+        <apex:pageBlockTable value="{!listObj}" var="a">
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.age}"/>
+            <apex:column value="{!a.sal}"/>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

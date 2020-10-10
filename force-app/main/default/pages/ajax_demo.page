@@ -1,0 +1,28 @@
+<apex:page id="page1">
+<!--<script src="/soap/ajax/34.0/myfirstjs.js" type="text/javascript"/>-->
+<script>
+function show()
+{
+   alert('hi1');
+   var result = salesforce.connection.login("seshagiri.bandila@gmail.com","seshagiri201625SFwY2lfrlEULb49DLOQw1D");
+   alert('hi'2);
+   salesforce.connection.sessionid = result.sessionId;
+   var queryResult = salesforce.connection.query(select id, name, industry from Account);
+   var name ="";
+   alert('hi2');
+   var records = queryResult.getArray('Records');
+   var i,j=records.length;
+   for(i=0; i<=j; i++)
+   {
+       name=name+'<br/>'+records[i].Name;
+   }
+   document.getElementById('page1:form1:pb:result').InnerHTML = names;
+}
+</script>
+<apex:form id="form1">
+<apex:pageblock title="AjaxTest" id="pb">
+<apex:commandButton value="CallAjax" onclick="show()"/><br/>
+<apex:outputText id="result"/>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

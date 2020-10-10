@@ -1,0 +1,15 @@
+<apex:page controller="AccountSetup">
+ <apex:form >
+ <apex:pageblock title="Account Details Page">
+ <apex:pageblockButtons >
+ <apex:commandButton value="Next Page" action="{!gotoContact}"/>
+ </apex:pageblockButtons>
+ <apex:pageblocksection columns="1">
+     <apex:inputfield value="{!a.Name}"/>
+     <apex:inputfield value="{!a.Industry}"/>
+     <apex:inputfield value="{!a.Type}"/>
+     <apex:inputfield value="{!a.Phone}"/>
+ </apex:pageblocksection>
+ </apex:pageblock>
+ </apex:form>
+</apex:page>

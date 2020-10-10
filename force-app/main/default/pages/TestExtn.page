@@ -1,0 +1,7 @@
+<apex:page standardController="Account" extensions="Extn1">
+    <p>{!Data}</p>
+<apex:form >
+    <apex:inputField value="{!account.id}"/>/>
+    <apex:inputField value="{!account.name}"/>
+</apex:form>
+</apex:page>

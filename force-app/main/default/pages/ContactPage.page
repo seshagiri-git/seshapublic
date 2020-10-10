@@ -1,0 +1,16 @@
+<apex:page controller="AccountSetup">
+ <apex:form >
+ <apex:pageblock title="Contact Details Page">
+ <apex:pageblockButtons >
+ <apex:commandButton value="Previous Page" action="{!gotoAccount}"/>
+  <apex:commandButton value="Next Page" action="{!gotoOpportunity}"/>
+ </apex:pageblockButtons>
+ <apex:pageblocksection >
+     <apex:inputField value="{!c.FirstName}"/>    
+     <apex:inputField value="{!c.LastName}"/> 
+     <apex:inputField value="{!c.email}"/> 
+     <apex:inputField value="{!c.Phone}"/> 
+ </apex:pageblocksection>
+ </apex:pageblock>
+ </apex:form>
+</apex:page>

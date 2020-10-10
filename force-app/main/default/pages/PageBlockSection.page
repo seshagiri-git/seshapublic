@@ -1,0 +1,23 @@
+<apex:page controller="InputExample">
+    <apex:form >
+        <apex:pageBlock title="InputData">
+                <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Submit" action="{!display}" />
+                </apex:pageBlockButtons>
+            <apex:pageBlockSection id="One">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Name"/>
+                    <apex:inputText value="{!name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Quantity"/>
+                    <apex:inputText value="{!Quant}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Total Price"/>
+                    <apex:outputText value="{!totalPrice}"/>
+                </apex:pageBlockSectionItem> 				
+            </apex:pageBlockSection>        
+        </apex:pageBlock>
+        </apex:form>
+</apex:page>

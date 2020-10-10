@@ -1,0 +1,37 @@
+<apex:page Controller="AccountSetup">
+<apex:form >
+    <apex:pageblock Title="Review and Save">
+     <apex:pageblockButtons >
+        <apex:commandButton value="PreviousPage" action="{!gotoOpportunity}"/>
+        <apex:commandButton value="Edit Account" action="{!gotoAccount}"/>
+        <apex:commandButton value="Edit Contact" action="{!gotoContact}"/>
+        <apex:commandButton value="Edit Opportunity" action="{!gotoOpportunity}"/>
+        <apex:commandButton value="Submit" action="{!GotodetailsPage}"/>
+        </apex:pageblockButtons>   
+          <apex:pageblocksection title="Account Information">
+                 <apex:Outputfield value="{!a.Name}"/>
+                 <apex:Outputfield value="{!a.Industry}"/>
+                 <apex:Outputfield value="{!a.Type}"/>
+                 <apex:Outputfield value="{!a.Phone}"/>  
+         </apex:pageblocksection>    
+         <apex:pageblockSection >
+                 <apex:OutputField value="{!c.FirstName}"/>    
+                 <apex:OutputField value="{!c.LastName}"/> 
+                 <apex:OutputField value="{!c.email}"/> 
+                 <apex:OutputField value="{!c.Phone}"/> 
+         </apex:pageblocksection>   
+         <apex:pageblocksection title="Contact details"> 
+                 <apex:Outputfield value="{!o.Name}"/>
+                 <apex:Outputfield value="{!o.Amount}"/>
+                 <apex:Outputfield value="{!o.CloseDate}"/>
+                 <apex:inputfield value="{!o.stagename}"/>
+         </apex:pageblocksection> 
+           <apex:pageblocksection title="Opportunity details">
+             <apex:Outputfield value="{!o.Name}"/>
+             <apex:Outputfield value="{!o.Amount}"/>
+             <apex:Outputfield value="{!o.CloseDate}"/>
+             <apex:Outputfield value="{!o.stagename}"/>
+ </apex:pageblocksection>
+     </apex:pageblock>
+    </apex:form>
+</apex:page>

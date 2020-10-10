@@ -1,0 +1,5 @@
+<apex:page >
+  <c:Sesha text="test abdcdddeff message"></c:Sesha>
+  <apex:image url="{!$Resource.TestImageSFDC}"/>
+
+</apex:page>

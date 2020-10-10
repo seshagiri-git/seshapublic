@@ -1,0 +1,16 @@
+<apex:page controller="AccountSetup">
+ <apex:form >
+ <apex:pageblock title="Opportunity details Page">
+ <apex:pageblockButtons >
+ <apex:commandButton value="Previous Page" action="{!gotoContact}"/>
+ <apex:commandButton value="Next Page" action="{!gotoSubmitReview}"/> 
+ </apex:pageblockButtons>
+  <apex:pageblocksection columns="1">
+     <apex:inputfield value="{!o.Name}"/>
+     <apex:inputfield value="{!o.Amount}"/>
+     <apex:inputfield value="{!o.CloseDate}"/>
+     <apex:inputfield value="{!o.stagename}"/>
+ </apex:pageblocksection>
+ </apex:pageblock>
+ </apex:form>
+</apex:page>

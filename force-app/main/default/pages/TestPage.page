@@ -1,0 +1,7 @@
+<apex:page standardController="Account">
+    {! $User.LastName}<br/>
+    {! $Profile.Name}<br/>
+    {! $Organization.Name}<br/>
+    {! $User.FirstName}<br/>
+    {! Account.Name}<br/>{!Account.Phone}
+</apex:page>

@@ -1,0 +1,30 @@
+<apex:page >
+    <apex:form >
+    <apex:pageblock title="login page" id="PB">
+        <apex:pageBlockSection id="pbs">
+        <apex:outputLabel >Enter Your Name</apex:outputLabel>
+        <apex:inputText id="userid"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection id="pbs2">
+        <apex:outputLabel >Enter password</apex:outputLabel>
+        <apex:inputText id="PWD"/>
+        </apex:pageBlockSection>
+        <apex:commandButton value="Login" onclick="show()"/>
+        </apex:pageblock>
+        
+    <script  type="text/javascript">
+    function show()
+    {
+
+        var userId = document.getElementById('{!$component.PB.pbs.userid}').value;
+        var pswd  =  document.getElementById('{!$component.PB.pbs2.PWD}').value;
+     	if(userId == "" || userId == null)
+        alert("Enter User Name");
+        else if(pswd == "" || pswd == null)
+        alert("Enter Password");
+        else
+            alert("Login Success");
+    }
+    </script>
+  </apex:form>
+ </apex:page>

@@ -1,0 +1,12 @@
+<apex:page standardController="Account" extensions="WeatherUpdateAPI">
+<apex:form >    
+<apex:pageblock title="{!City} Weather">
+    <apex:pageBlockSection >   
+        <apex:outputText label="Temparature" value="{!Temp}"/>
+        <apex:outputText label="Wind" value="{!Wind}"/>
+        <apex:outputText label="Pressure" value="{!Pressure}"/>
+        <apex:outputText label="Humidity" value="{!Humidity}"/>  
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>
